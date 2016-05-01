@@ -26,7 +26,7 @@ gcc -o teste pcode.c rpn2pci.c btree2rpn.c pushdown.c main.c
 ./teste "expression"
 
 # Example
-
+```
 List of productions to build the expr (((1-2)*1)+((2*1)/2)) without '(' ')': 
 4 4 4 0 6 1 7 0 5 4 4 1 7 0 8 1 
 Please apply productions to nodes. (Leftmost First)
@@ -63,5 +63,5 @@ Apply production A -> / in node: 2
 + 1 / A * * E E E 2 1 2 1 _ _ _ _ _ _ _ _ 
 Apply production E -> 2 in node: 6
 + 1 / A * * 2 E E 2 1 2 1 _ _ _ _ _ _ _ _ 
-
+```
 (See output.txt for automata and pcode execution)
