@@ -65,7 +65,7 @@ int main (int argc, char **argv){
 				
 			    // RPN -> PCI
 			    printf("Step 5. Convert RPN into pcode instructions ... ");
-				Tinstruction * instructions = toInstruction(rpn, size);
+				Tinstruction * instructions = toInstruction(rpn);
 				printf("done!\n");
 				
 				// Array of instructions
