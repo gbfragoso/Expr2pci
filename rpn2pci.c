@@ -1,6 +1,6 @@
 #include "rpn2pci.h"
 
-Tinstruction* toInstruction(char *epr, int treeSize){
+Tinstruction* toInstruction(char *epr){
 	int i;
 	int aux = 0; // Array position
 	int totalInstructions = 1;
@@ -14,7 +14,7 @@ Tinstruction* toInstruction(char *epr, int treeSize){
 	Tinstruction intInst;
 	intInst.operation = 5;
 	intInst.level = 0;
-	intInst.argument = treeSize;
+	intInst.argument = 5;
 	instructions[0] = intInst;
 	
 	while (*p) { // While there are more characters to process...
