@@ -82,6 +82,7 @@ void pcode(Tinstruction inst[], int stack[], FILE *output){
     		case LOD:
     			top++;
     			stack[top] = stack[ getBase(instruction.level, base, stack) + instruction.argument ];
+    			stack[ getBase(instruction.level, base, stack) + instruction.argument ] = -999;
     			break;
     		case STO:
     			stack[ getBase(instruction.level, base, stack) + instruction.argument ] = stack[top];
@@ -114,7 +115,11 @@ void pcode(Tinstruction inst[], int stack[], FILE *output){
     	fprintf(output,"%-10s %-7d %-7d %-7d %-7d %-15d", getInstructionName(instruction.operation),instruction.level, instruction.argument, top, counter, base);
     
     	for (aux = base; aux<top+1;aux++){
-    		fprintf(output,"%d ", stack[aux]);
+    		if(stack[aux] == -999){
+    			fprintf(output,"_");	
+    		}else{
+    			fprintf(output,"%d ", stack[aux]);
+    		}
     	}
     	fprintf(output,"\n");
     	
