@@ -8,6 +8,6 @@ char* postOrder(char** btree, int treeSize, int node, char* expr){
     	postOrder(btree, treeSize, 2*node+1, expr);
     	postOrder(btree, treeSize, 2*node+2, expr);
     	strcat(expr,btree[node]);
-    	strcat(expr, " ");
+    	strcat(expr, " \0");
     }
 }
