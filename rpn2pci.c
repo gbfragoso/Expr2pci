@@ -66,7 +66,7 @@ Tinstruction* toInstruction(char *epr){
 	        		instructions[totalInstructions+3] = plusSto;
 	        		
 	        		totalInstructions += 4;
-	        		aux++;
+	        		aux--;
 	        		break;
 	        	}
 	        	case '-':{
@@ -96,7 +96,7 @@ Tinstruction* toInstruction(char *epr){
 	        		instructions[totalInstructions+3] = subSto;
 	        		
 	        		totalInstructions += 4;
-	        		aux++;
+	        		aux--;
 	        		break;
 	        	}
 	        	case '*':{
@@ -126,7 +126,7 @@ Tinstruction* toInstruction(char *epr){
 	        		instructions[totalInstructions+3] = multSto;
 	        		
 	        		totalInstructions += 4;
-	        		aux++;
+	        		aux--;
 	        		break;
 	        	}
 	        	case '/':{
@@ -156,7 +156,7 @@ Tinstruction* toInstruction(char *epr){
 	        		instructions[totalInstructions+3] = divSto;
 	        		
 	        		totalInstructions += 4;
-	        		aux++;
+	        		aux--;
 	        		break;
 	        	}
 	        	case '~':{
