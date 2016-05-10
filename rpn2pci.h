@@ -12,6 +12,6 @@ typedef struct{
 
 #endif
 
-Tinstruction* toInstruction(char *epr, int treeSize);
+Tinstruction* toInstruction(char *epr);
 
 #endif
