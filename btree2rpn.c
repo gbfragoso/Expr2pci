@@ -1,13 +1,13 @@
 #include "btree2rpn.h"
 #include <string.h>
 
-char* postOrder(char** btree, int treeSize, int node, char* expr){
-    if(node >= treeSize || strcmp(btree[node], "_") == 0){
+char* postOrder(char* btree, int treeSize, int node, char* expr){
+    if(node >= treeSize || btree[node]== "_"){
     	return NULL;
     }else{
     	postOrder(btree, treeSize, 2*node+1, expr);
     	postOrder(btree, treeSize, 2*node+2, expr);
-    	strcat(expr,btree[node]);
-    	strcat(expr, " \0");
+    	char c[3] = {btree[node],' ','\0');
+    	strcat(expr, c);
     }
 }
