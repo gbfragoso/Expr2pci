@@ -17,36 +17,12 @@ Grammar for arithmetic expressions (Greibach)
 # Limitations
 * This machine inherits the limitations of grammar
 * X/Y variables dont receive values
-* Although the pushdown automata give us the set of productions we need to add them manually to nodes.
-* Possible bug on bad organizated btree
 
 # Compiling
-gcc -o teste pcode.c rpn2pci.c btree2rpn.c pushdown.c main.c
+gcc -o teste ada2asa.c pcode.c rpn2pci.c btree2rpn.c pushdown.c main.c
 
 # Running
 ./teste "expression"
 
 # Example
-```
-./teste "((1-2)*1)"
-List of productions to build the expr ((1-2)*1) without '(' ')': 
-4 4 0 6 1 7 0 
-Please apply productions to nodes. (Leftmost First)
-E _ _ _ _ _ _ _ _ 
-Apply production E -> EAE in node: 0
-A E E _ _ _ _ _ _ 
-Apply production E -> EAE in node: 1
-A A E E E _ _ _ _ 
-Apply production E -> 1 in node: 3
-A A E 1 E _ _ _ _ 
-Apply production A -> - in node: 1
-A - E 1 E _ _ _ _ 
-Apply production E -> 2 in node: 4
-A - E 1 2 _ _ _ _ 
-Apply production A -> * in node: 0
-* - E 1 2 _ _ _ _ 
-Apply production E -> 1 in node: 2
-* - 1 1 2 _ _ _ _ 
-Done! Output file generated
-```
-(See output.txt for automata and pcode execution)
+See output.txt for automata and pcode execution
