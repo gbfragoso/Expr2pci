@@ -58,7 +58,7 @@ Tinstruction* toInstruction(char *epr, int treeSize){
 	        		Tinstruction plusSto;
 	        		plusSto.operation = 3;
 	        		plusSto.level = 0;
-	        		plusSto.argument = aux;
+	        		plusSto.argument = aux-2;
 	        		
 	        		instructions[totalInstructions] = plusLod;
 	        		instructions[totalInstructions+1] = plusLod2;
@@ -88,7 +88,7 @@ Tinstruction* toInstruction(char *epr, int treeSize){
 	        		Tinstruction subSto;
 	        		subSto.operation = 3;
 	        		subSto.level = 0;
-	        		subSto.argument = aux;
+	        		subSto.argument = aux-2;
 	        		
 	        		instructions[totalInstructions] = subLod;
 	        		instructions[totalInstructions+1] = subLod2;
@@ -118,7 +118,7 @@ Tinstruction* toInstruction(char *epr, int treeSize){
 	        		Tinstruction multSto;
 	        		multSto.operation = 3;
 	        		multSto.level = 0;
-	        		multSto.argument = aux;
+	        		multSto.argument = aux-2;
 	        		
 	        		instructions[totalInstructions] = multLod;
 	        		instructions[totalInstructions+1] = multLod2;
@@ -148,7 +148,7 @@ Tinstruction* toInstruction(char *epr, int treeSize){
 	        		Tinstruction divSto;
 	        		divSto.operation = 3;
 	        		divSto.level = 0;
-	        		divSto.argument = aux;
+	        		divSto.argument = aux-2;
 	        		
 	        		instructions[totalInstructions] = divLod;
 	        		instructions[totalInstructions+1] = divLod2;
