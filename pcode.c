@@ -114,7 +114,7 @@ void pcode(Tinstruction inst[], int stack[], FILE *output){
     	// PrintStackTrace
     	fprintf(output,"%-10s %-7d %-7d %-7d %-7d %-15d", getInstructionName(instruction.operation),instruction.level, instruction.argument, top, counter, base);
     
-    	for (aux = base; aux<top+1;aux++){
+    	for (aux = base; aux<top+1 && top > 0;aux++){
     		if(stack[aux] == -10){
     			fprintf(output,"_ ");	
     		}else{
